@@ -237,48 +237,66 @@ footer {
 }
 
 /* Untuk layar kecil seperti ponsel */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     header {
-        text-align: center; /* Ubah teks menjadi rata tengah di layar kecil */
-        justify-content: center; 
+        text-align: center;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
     }
 
     nav ul li {
-        display: block; /* Ubah navigasi menjadi vertikal */
+        display: block;
         margin: 10px 0;
     }
 
     .about-content {
-        flex-direction: column; /* Bikin konten 'about' jadi vertikal */
-    }
-
-    .profile-pic {
-        width: 100px;
-        height: 100px;
+        flex-direction: column;
+        text-align: center;
     }
 
     .skill-list, .service-list {
-        flex-direction: column; /* Mengubah skill dan layanan menjadi kolom */
+        flex-direction: column;
+        padding: 0;
     }
 
     .skill-item, .service-item {
-        width: 100%; /* Memastikan item menggunakan 100% lebar layar */
-        max-width: 300px;
+        width: 100%;
     }
 
-    footer {
-        font-size: 14px; /* Perkecil ukuran teks di footer */
-    }
-}
-
-/* Untuk tablet */
-@media (max-width: 1024px) {
-    .card-group {
-        flex-direction: column; /* Ubah card menjadi vertikal */
-        align-items: center;
+    #contact-form {
+        padding: 10px;
     }
 
     .card {
-        max-width: 90%; /* Membuat card lebih lebar di tablet */
+        max-width: 100%;
     }
 }
+
+/* Untuk tablet atau layar sedang */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .skill-list, .service-list {
+        justify-content: space-between;
+    }
+
+    .skill-item, .service-item {
+        width: 45%;
+    }
+}
+
