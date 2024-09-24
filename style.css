@@ -236,3 +236,49 @@ footer {
     padding: 20px;
 }
 
+/* Untuk layar kecil seperti ponsel */
+@media (max-width: 768px) {
+    header {
+        text-align: center; /* Ubah teks menjadi rata tengah di layar kecil */
+        justify-content: center; 
+    }
+
+    nav ul li {
+        display: block; /* Ubah navigasi menjadi vertikal */
+        margin: 10px 0;
+    }
+
+    .about-content {
+        flex-direction: column; /* Bikin konten 'about' jadi vertikal */
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skill-list, .service-list {
+        flex-direction: column; /* Mengubah skill dan layanan menjadi kolom */
+    }
+
+    .skill-item, .service-item {
+        width: 100%; /* Memastikan item menggunakan 100% lebar layar */
+        max-width: 300px;
+    }
+
+    footer {
+        font-size: 14px; /* Perkecil ukuran teks di footer */
+    }
+}
+
+/* Untuk tablet */
+@media (max-width: 1024px) {
+    .card-group {
+        flex-direction: column; /* Ubah card menjadi vertikal */
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%; /* Membuat card lebih lebar di tablet */
+    }
+}
